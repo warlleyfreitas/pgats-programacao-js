@@ -1,0 +1,24 @@
+{
+  "name": "pgats-programacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://warlleyfreitas@github.com/warlleyfreitas/pgats-programacao-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warlleyfreitas/pgats-programacao-js/issues"
+  },
+  "homepage": "https://github.com/warlleyfreitas/pgats-programacao-js#readme",
+  "devDependencies": {
+    "mocha": "^10.8.2"
+  }
+}
