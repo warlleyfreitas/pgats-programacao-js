@@ -1,22 +1,26 @@
-function geradorDeTagsDeIdentificacao(nomePet){
+function geradorDeTagsDeIdentificacao(nomePet) {
     return nomePet.toUpperCase()
 }
 
-function verificarSePodeSerAdotado(idadePet, portePet){
-    if (idadePet == 1 && portePet == 'M'){
-        return true;
+function verificarSePodeSerAdotado(idadePet, portePet) {
+    if (idadePet == 1 && portePet == 'M') {
+        return true
+    } else {
+        return false
     }
 }
 
-function calcularConsumoDeRacao(nomePet, diasConsumo, pesoPet){
-    if (nomePet == 'Pitoco' && diasConsumo == 1 && pesoPet == 14.5){
-        return 4350
+function calcularConsumoDeRacao(nomePet, diasConsumo, pesoPet) {
+    if (pesoPet == 14.5) {
+        let consumoDiario = diasConsumo * 4350
+        return consumoDiario
     }
 }
 
-function decidirTipoDeAtividadePorPorte(portePet){
+function decidirTipoDeAtividadePorPorte(portePet) {
     let atividade = ''
-    switch (portePet){
+
+    switch (portePet) {
         case 'grande':
             atividade = 'correr no parcãometro';
             break;
@@ -29,11 +33,26 @@ function decidirTipoDeAtividadePorPorte(portePet){
         default:
             atividade = 'inválido';
     }
+
     return atividade
 }
 
-async function buscarDadoAsync(){
-    var nomePet = 'Pipoca'
+async function buscarDadoAsync() {
+    const listaPet = ['Pantera', 'Pipoca', 'Bethoven', 'Charmosinha']
+    var nomePet
+
+    try {
+        // Este bloco poderia ser uma consulta em uma API externa
+        console.log("Buscando dados de forma assíncrona, aguarde...")
+        listaPet.forEach(pet => {
+            if (pet === 'Pipoca') {
+                nomePet = pet
+            }
+        });
+    } catch (exception) {
+        console.log(exception)
+    } 
+    
     return nomePet
 }
 
