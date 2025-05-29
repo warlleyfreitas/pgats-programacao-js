@@ -3,7 +3,7 @@ function geradorDeTagsDeIdentificacao(nomePet) {
 }
 
 function verificarSePodeSerAdotado(idadePet, portePet) {
-    if (idadePet == 1 && portePet == 'M') {
+    if (idadePet == 1 && portePet === 'M') {
         return true
     } else {
         return false
@@ -11,10 +11,8 @@ function verificarSePodeSerAdotado(idadePet, portePet) {
 }
 
 function calcularConsumoDeRacao(nomePet, diasConsumo, pesoPet) {
-    if (pesoPet == 14.5) {
-        let consumoDiario = diasConsumo * 4350
-        return consumoDiario
-    }
+    var consumoDiario = pesoPet * 300
+    return consumoDiario
 }
 
 function decidirTipoDeAtividadePorPorte(portePet) {
@@ -41,18 +39,12 @@ async function buscarDadoAsync() {
     const listaPet = ['Pantera', 'Pipoca', 'Bethoven', 'Charmosinha']
     var nomePet
 
-    try {
-        // Este bloco poderia ser uma consulta em uma API externa
-        console.log("Buscando dados de forma assíncrona, aguarde...")
-        listaPet.forEach(pet => {
-            if (pet === 'Pipoca') {
-                nomePet = pet
-            }
-        });
-    } catch (exception) {
-        console.log(exception)
-    } 
-    
+    listaPet.forEach(pet => {
+        if (pet === 'Pipoca') {
+            nomePet = pet
+        }
+    });
+
     return nomePet
 }
 
