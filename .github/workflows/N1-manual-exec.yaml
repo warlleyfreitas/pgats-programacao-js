@@ -1,7 +1,7 @@
 # CI de Nível 01 - Disparo manual a partir de 1 clique
 
 # nome do nosso 'pipeline'
-name: 'Execução Manual'
+name: "Execução Manual"
 
 # regras de disparo (gatilhos/triggers)
 # gatilho de exec manual = workflow_dispatch
@@ -24,23 +24,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.x
-    
+
       # instalação do yarn
       - name: Instalando Yarn
         run: npm install -g yarn
 
       # instalação das dependências
       - name: Instalando dependências
-        run: yarn
+        run: npm install
 
-      # instalação do Playwright
-      #- name: Instalando Playwright
-      #  run: yarn playwright install
+      - name: Verificar arquivos
+        run: |
+          echo "Verificando se o arquivo existe:"
+          ls -la conceitos/testes-de-unidade.js || echo "Arquivo não encontrado"
 
       # instalação do Mocha
       - name: Instalando Mocha
         run: npm install -D mocha
-    
+
       # executar os testes e2e
       - name: Executando Testes
-        run: npx mocha testes/01-testes.js
+        run: npx mocha testes/01-testes.js --loader=esmock

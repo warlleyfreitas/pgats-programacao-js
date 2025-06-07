@@ -1,17 +1,16 @@
+import { exibirNomeDogFormatado } from "../conceitos/testes-de-unidade.js";
+import assert from "node:assert";
 
-import { exibirNomeDogFormatado } from '../conceitos/testes-de-unidade.js'
-import assert from 'node:assert'
+describe("Testes do Projeto", () => {
+  it("Primeiro teste", () => {
+    assert.strictEqual(exibirNomeDogFormatado("Mimosa"), "MIMOSA");
+  });
 
-describe('Testes do Projeto', () =>{
-    it('Primeiro teste', () => {
-        assert.strictEqual(exibirNomeDogFormatado('Mimosa'), 'MIMOSA')
-    });
+  it("Segundo teste", () => {
+    console.log("Exemplo de teste executado");
+  });
 
-    it('Segundo teste', () => {
-        console.log("Exemplo de teste executado")
-    });
-
-    it('Terceiro teste', () => {
-        throw new Error()
-    });
-})
+  it("Terceiro teste", () => {
+    throw new Error();
+  });
+});
