@@ -34,8 +34,12 @@ jobs:
         run: yarn
 
       # instalação do Playwright
-      - name: Instalando Playwright
-        run: yarn playwright install
+      #- name: Instalando Playwright
+      #  run: yarn playwright install
+
+      # checando padronização de código
+      - name: Checando padronização de código
+        run: yarn lint
 
       # instalação do Mocha
       - name: Instalando Mocha
