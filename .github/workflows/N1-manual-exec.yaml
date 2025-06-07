@@ -36,7 +36,7 @@ jobs:
       - name: Verificar arquivos
         run: |
           echo "Verificando se o arquivo existe:"
-          ls -la conceitos/testes-de-unidade.js || echo "Arquivo não encontrado"
+          ls -la Conceitos/testes-de-unidade.js || echo "Arquivo não encontrado"
 
       # instalação do Mocha
       - name: Instalando Mocha
