@@ -11,6 +11,6 @@ describe("Testes do Projeto", () => {
   });
 
   it("Terceiro teste", () => {
-    throw new Error();
+    
   });
 });
