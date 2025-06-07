@@ -11,7 +11,7 @@ on:
 
 # trabalhos/tarefas dentro do pipeline = jobs
 jobs:
-  unit-tests:
+  testes-unidade:
     # maquina que o job vai executar
     runs-on: ubuntu-latest
 
