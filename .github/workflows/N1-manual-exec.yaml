@@ -44,4 +44,4 @@ jobs:
 
       # executar os testes e2e
       - name: Executando Testes
-        run: npx mocha testes/01-testes.js --loader=esmock
+        run: npx mocha testes/01-testes.js
