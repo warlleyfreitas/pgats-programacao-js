@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.x
-
+    
       # instalação do yarn
       - name: Instalando Yarn
         run: npm install -g yarn
@@ -37,6 +37,10 @@ jobs:
       - name: Instalando Playwright
         run: yarn playwright install
 
+      # instalação do Mocha
+      - name: Instalando Mocha
+        run: npm install -D mocha
+    
       # executar os testes e2e
-      - name: Executando Testes E2E
-        run: yarn run e2e
+      - name: Executando Testes
+        run: npx mocha testes/01-testes.js
