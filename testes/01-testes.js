@@ -8,6 +8,10 @@ describe('Testes do Projeto', () =>{
     });
 
     it('Segundo teste', () => {
+        console.log("Exemplo de teste executado")
+    });
+
+    it('Terceiro teste', () => {
         throw new Error()
     });
 })
